@@ -1,0 +1,11 @@
+
+<table border="1">
+    {% for item in tabJoueur %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.username }}</td>
+            <td>{{ item.nbrBut }}</td>
+            <td><a href="{{ path('updateJoueur',{'id':item.id})}}">Update</a></td>
+        </tr>
+    {% endfor %}
+</table>

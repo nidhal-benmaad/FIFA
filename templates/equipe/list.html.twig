@@ -1,0 +1,13 @@
+{{ form(searchForm) }}
+<table border="1">
+    {% for item in tabEquipe %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nom }}</td>
+            <td>{{ item.description }}</td>
+            <td><a href="{{ path('showEquipe',{'id':item.id})}}">Detail</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>Nombre d'equipe: {{ count }}</h2>
